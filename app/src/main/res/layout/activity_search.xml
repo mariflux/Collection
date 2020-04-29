@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SearchActivity">
+
+    <TextView
+        android:id="@+id/textView_showAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Pokaż wszystkie"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlbutton"
+        android:layout_width="365dp"
+        android:layout_height="189dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="250dp">
+
+        <Button
+            android:id="@+id/button_showGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="50dp"
+            android:text="Gry" />
+
+        <Button
+            android:id="@+id/button_showBooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_showGames"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="10dp"
+            android:text="Książki" />
+
+        <Button
+            android:id="@+id/button_showTVSeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_toStartOf="@+id/button_showGames"
+            android:layout_toLeftOf="@+id/button_showGames"
+            android:text="Seriale" />
+
+        <Button
+            android:id="@+id/button_showFilms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_showTVSeries"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/button_showBooks"
+            android:layout_toLeftOf="@+id/button_showBooks"
+            android:text="Filmy" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_advancedSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="420dp"
+        android:text="Wyszukiwanie zaawansowane"
+        android:textColor="#0B0B0B"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="100dp">
+
+        <TextView
+            android:id="@+id/filter_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filter_title"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="42dp"
+            android:layout_toLeftOf="@+id/chooseCategoryFilter"
+            android:text="Kategoria"
+            android:textSize="18sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/chooseCategoryFilter"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filterText_title"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <ImageView
+            android:id="@+id/dropDownArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/chooseCategoryFilter"
+            android:layout_alignRight="@+id/chooseCategoryFilter"
+            android:layout_alignBottom="@+id/chooseCategoryFilter"
+            android:padding="5dp"
+            app:srcCompat="@mipmap/baseline_arrow_drop_down_black_24" />
+
+        <TextView
+            android:id="@+id/filter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filter_type"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="42dp"
+            android:layout_toLeftOf="@+id/filterText_title"
+            android:text="Tytuł"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/filterText_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filterText_type"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/filter_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filter_description"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="42dp"
+            android:layout_toLeftOf="@+id/filterText_type"
+            android:text="Gatunek"
+            android:textSize="18sp" />
+        <AutoCompleteTextView
+            android:id="@+id/filterText_type"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filterText_description"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <ImageView
+            android:id="@+id/dropDownArrowType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/filterText_type"
+            android:layout_alignRight="@+id/filterText_type"
+            android:layout_alignBottom="@+id/filterText_type"
+            android:padding="5dp"
+            app:srcCompat="@mipmap/baseline_arrow_drop_down_black_24" />
+
+
+
+        <TextView
+            android:id="@+id/filter_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filterTextView_author"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="42dp"
+            android:layout_toLeftOf="@+id/filterText_description"
+            android:text="Opis"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/filterText_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/filterText_author"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/filterTextView_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toLeftOf="@+id/filterText_author"
+            android:text="Autor"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/filterText_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_advancedSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="Szukaj" />
+
+
+</RelativeLayout>
